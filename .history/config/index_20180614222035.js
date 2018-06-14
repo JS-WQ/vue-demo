@@ -9,7 +9,7 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: 'dist',
+    assetsPublicPath: '/vue-demo/dist',
     proxyTable: {},
 
     // Various Dev Server settings
@@ -43,7 +43,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/vue-demo/dist',
+    assetsPublicPath: '/',
 
     /**
      * Source Maps
