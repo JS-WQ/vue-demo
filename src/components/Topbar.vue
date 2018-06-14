@@ -12,7 +12,7 @@
                 <div v-else class="userActions">
                     <el-button  round @click.prevent="signUpVisi = true,loginVisi = false">注册</el-button> 
                     <loginSignBox :visible="signUpVisi" @close="signUpVisi = false">
-                        <signUp @success="login($event)" v-bind:signUpVisi="signUpVisi"/>
+                        <signUp @success="login($event)" v-bind:signUpVisi="signUpVisi" @changedata="changedata" @changeuse="changeuse" @changeSign="changeSign"/>
                     </loginSignBox>
                     <el-button  round @click.prevent="loginVisi = true,signUpVisi = false">登录</el-button> 
                     <loginSignBox :visible="loginVisi" @close="loginVisi = false">

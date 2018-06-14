@@ -30,7 +30,8 @@ export default {
             formData:{
                 username:'',
                 password:'',
-                eMail:''
+                eMail:'',
+                inlogined:false
             }
         }
     },
@@ -40,15 +41,18 @@ export default {
             var user = new AV.User();
             user.setUsername(this.formData.username);
             user.setPassword(this.formData.password);     
-            user.setEmail(this.formData.eMail);      
+            user.setEmail(this.formData.eMail);
+            var _this = this      
             user.signUp().then(function (loggedInUser) {
+                console.log(loggedInUser)
+                _this.$emit('changedata',true)
+                _this.$emit('changeuse',_this.formData.username)
+
             }, function (error) {
                 console.log(error)
-            });
+            })
         }
     },
-    created(){
-    }
 }
 </script>
 
